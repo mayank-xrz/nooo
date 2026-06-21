@@ -1,0 +1,544 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #eeeeee;
+  color: #000000;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.search-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-title-bar {
+  height: 101px;
+  border-top: 5px solid #111111;
+  background: #11c5c6;
+  text-align: center;
+}
+
+.search-title-bar h1 {
+  margin: 13px 0 0;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.search-content {
+  width: min(882px, calc(100vw - 34px));
+  margin: 157px auto 0;
+}
+
+.search-content h2 {
+  margin: 0 0 30px;
+  color: #2f36c8;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.credential-form {
+  width: min(565px, 100%);
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 156px;
+  align-items: center;
+  column-gap: 22px;
+  min-height: 34px;
+}
+
+.form-row label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form-row input {
+  width: 156px;
+  height: 29px;
+  padding: 1px 3px;
+  border: 2px inset #e5e5e5;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  font-size: 18px;
+}
+
+.admit-card-hint {
+  margin: 4px 0 8px;
+  color: #e10000;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.button-row {
+  margin-top: 7px;
+  padding-left: 384px;
+  white-space: nowrap;
+}
+
+.button-row button {
+  min-width: 79px;
+  height: 31px;
+  margin-right: 12px;
+  padding: 2px 9px;
+  border: 2px outset #d2d2d2;
+  border-radius: 0;
+  background: #eeeeee;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.button-row button:active {
+  border-style: inset;
+}
+
+.search-error {
+  width: 690px;
+  max-width: 100%;
+  margin: 24px auto 0;
+  color: #d60000;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.search-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.search-disclaimer {
+  height: 38px;
+  margin: 0;
+  padding-top: 13px;
+  border-top: 2px solid #b7b7b7;
+  border-bottom: 1px solid #c9c9c9;
+  background: #f9f9f9;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nic-footer {
+  height: 32px;
+  margin: 0;
+  padding-top: 3px;
+  background: #b8d7f4;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.result-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.result-page-guard {
+  background: #ffffff;
+}
+
+.result-shell {
+  width: min(736px, 100vw);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 14px 8px 20px;
+  background: #ffffff;
+}
+
+.result-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 680px;
+  max-width: calc(100vw - 24px);
+  height: 50px;
+  margin: 0 auto;
+  background: #10c7c7;
+  color: #ffffff;
+}
+
+.cbse-logo {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  background: #ffffff;
+}
+
+.board-name {
+  padding-left: 10px;
+  line-height: 1.1;
+  text-shadow: 0 0 0 #ffffff;
+}
+
+.board-name-hindi {
+  margin-bottom: 3px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.board-name-english {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result-url {
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.banner-credit {
+  width: 680px;
+  max-width: calc(100vw - 24px);
+  margin: 3px auto 0;
+  padding-right: 50px;
+  font-size: 10px;
+  text-align: right;
+}
+
+.print-link,
+.another-result-link {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #0000ee;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.print-link {
+  display: block;
+  margin: -1px 0 7px 38px;
+  font-size: 10px;
+}
+
+.result-heading {
+  text-align: center;
+}
+
+.result-heading h1 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.result-heading h2 {
+  margin: 0 0 7px;
+  color: #2c2cae;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.candidate-details {
+  width: 552px;
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+}
+
+.candidate-details dl {
+  margin: 0 0 3px;
+}
+
+.candidate-details div {
+  display: grid;
+  grid-template-columns: 106px 1fr;
+  min-height: 17px;
+}
+
+.candidate-details dt,
+.candidate-details dd {
+  margin: 0;
+  line-height: 16px;
+}
+
+.candidate-details dt {
+  font-weight: 700;
+}
+
+.marks-table {
+  width: 552px;
+  max-width: calc(100vw - 32px);
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 10px;
+}
+
+.marks-table col,
+.marks-table th,
+.marks-table td {
+  border: 1px solid #000000;
+}
+
+.marks-table th {
+  height: 28px;
+  padding: 2px 3px;
+  background: #0000cc;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.marks-table td {
+  height: 17px;
+  padding: 1px 4px;
+  background: #ffffff;
+  line-height: 1.15;
+}
+
+.marks-table th:nth-child(1),
+.marks-table td:nth-child(1) {
+  width: 58px;
+  text-align: center;
+}
+
+.marks-table th:nth-child(2),
+.marks-table td:nth-child(2) {
+  width: 171px;
+  text-align: left;
+}
+
+.marks-table th:nth-child(3),
+.marks-table td:nth-child(3) {
+  width: 76px;
+  text-align: center;
+}
+
+.marks-table th:nth-child(4),
+.marks-table td:nth-child(4) {
+  width: 93px;
+  text-align: center;
+}
+
+.marks-table th:nth-child(5),
+.marks-table td:nth-child(5) {
+  width: 65px;
+  text-align: center;
+}
+
+.marks-table th:nth-child(6),
+.marks-table td:nth-child(6) {
+  width: 89px;
+  text-align: center;
+}
+
+.marks-table .result-strip td {
+  height: 18px;
+  padding-left: 108px;
+  background: #0000cc;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+}
+
+.another-result-link {
+  display: block;
+  margin: 8px auto 0;
+  color: #0000ee;
+  font-size: 12px;
+}
+
+.notes {
+  width: 660px;
+  max-width: calc(100vw - 30px);
+  margin: 11px auto 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.notes p {
+  margin: 0;
+}
+
+.notes-title {
+  margin-bottom: 4px !important;
+  font-size: 16px;
+}
+
+.double-rule {
+  width: 644px;
+  max-width: calc(100vw - 40px);
+  height: 6px;
+  margin: 14px auto 22px;
+  border: 0;
+  border-top: 2px solid #777777;
+  border-bottom: 2px solid #777777;
+  background: #dddddd;
+}
+
+.result-disclaimer {
+  width: 545px;
+  max-width: calc(100vw - 40px);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.22;
+}
+
+.result-footer {
+  margin-top: 29px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .search-page {
+    overflow-x: auto;
+  }
+
+  .search-title-bar h1 {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .search-content {
+    margin-top: 90px;
+  }
+
+  .search-content h2 {
+    font-size: 19px;
+  }
+
+  .credential-form {
+    width: 360px;
+  }
+
+  .form-row {
+    grid-template-columns: 186px 150px;
+    column-gap: 12px;
+  }
+
+  .form-row label,
+  .form-row input,
+  .admit-card-hint,
+  .button-row button {
+    font-size: 15px;
+  }
+
+  .button-row {
+    padding-left: 198px;
+  }
+
+  .search-disclaimer {
+    font-size: 14px;
+  }
+
+  .nic-footer {
+    font-size: 15px;
+  }
+
+  .board-name-hindi {
+    font-size: 13px;
+  }
+
+  .board-name-english {
+    font-size: 14px;
+  }
+
+  .result-url {
+    display: none;
+  }
+
+  .marks-table {
+    width: calc(100vw - 32px);
+    font-size: 9px;
+  }
+
+  .marks-table th:nth-child(1),
+  .marks-table td:nth-child(1) {
+    width: 10.5%;
+  }
+
+  .marks-table th:nth-child(2),
+  .marks-table td:nth-child(2) {
+    width: 31%;
+  }
+
+  .marks-table th:nth-child(3),
+  .marks-table td:nth-child(3) {
+    width: 13.8%;
+  }
+
+  .marks-table th:nth-child(4),
+  .marks-table td:nth-child(4) {
+    width: 16.8%;
+  }
+
+  .marks-table th:nth-child(5),
+  .marks-table td:nth-child(5) {
+    width: 11.8%;
+  }
+
+  .marks-table th:nth-child(6),
+  .marks-table td:nth-child(6) {
+    width: 16.1%;
+  }
+
+  .marks-table .result-strip td {
+    padding-left: 20%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 860px) {
+  .search-title-bar h1 {
+    margin-top: 21px;
+    font-size: 44px;
+    white-space: nowrap;
+  }
+
+  .search-content {
+    margin-top: 132px;
+  }
+
+  .search-content h2 {
+    font-size: 22px;
+  }
+}
+
+@media print {
+  .print-link,
+  .another-result-link {
+    display: none;
+  }
+
+  .result-page,
+  .result-shell {
+    min-height: auto;
+  }
+}
