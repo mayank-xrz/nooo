@@ -46,6 +46,15 @@ input {
   margin: 157px auto 0;
 }
 
+.demo-notice {
+  margin: 0 0 12px;
+  color: #8a0000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+}
+
 .search-content h2 {
   margin: 0 0 30px;
   color: #2f36c8;
@@ -227,6 +236,13 @@ input {
   padding-right: 50px;
   font-size: 10px;
   text-align: right;
+}
+
+.result-demo-notice {
+  width: 680px;
+  max-width: calc(100vw - 24px);
+  margin: 4px auto 4px;
+  font-size: 10px;
 }
 
 .print-link,

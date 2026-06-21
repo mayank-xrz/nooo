@@ -71,6 +71,10 @@ export default function ResultPage() {
           Brought to you by National Informatics Centre
         </div>
 
+        <p className="demo-notice result-demo-notice">
+          Unofficial demo replica. Not affiliated with CBSE or NIC.
+        </p>
+
         <button className="print-link" type="button" onClick={printPage}>
           Print this page
         </button>

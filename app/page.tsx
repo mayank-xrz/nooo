@@ -65,6 +65,10 @@ export default function SearchPage() {
       </header>
 
       <section className="search-content" aria-labelledby="search-heading">
+        <p className="demo-notice">
+          Unofficial demo replica. Not affiliated with CBSE or NIC.
+        </p>
+
         <h2 id="search-heading">
           Senior School Certificate Examination (Class XII) Results 2026
         </h2>

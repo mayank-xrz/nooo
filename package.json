@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "pnpm dlx serve@latest out",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
