@@ -134,10 +134,10 @@ The repository includes Netlify configuration so the dashboard does not need to 
 ```toml
 [build]
   command = "pnpm build"
-  publish = ".next"
+  publish = "out"
 ```
 
-The `.npmrc` file enables public hoisting for pnpm, which Netlify recommends for pnpm-powered Next.js projects.
+The app uses Next.js static export, so `pnpm build` creates the deployable `out` directory. The `.npmrc` file enables public hoisting for pnpm, which Netlify recommends for pnpm-powered Next.js projects.
 
 The `pnpm-workspace.yaml` file also approves the `sharp` install script required by Next.js image tooling:
 

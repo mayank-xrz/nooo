@@ -1,6 +1,16 @@
 [build]
   command = "pnpm build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/result"
+  to = "/result.html"
+  status = 200
+
+[[redirects]]
+  from = "/result/"
+  to = "/result.html"
+  status = 200
